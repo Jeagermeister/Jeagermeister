@@ -21,6 +21,18 @@ Linux as the primary target rather than an afterthought — Proton-aware game de
 native SMAPI support, and diagnostics for the engine limits that actually break modded
 games. Ships as an AppImage.
 
+**[SIGIL](https://github.com/Jeagermeister/sigil)** · C
+A minimal native client for AI chat providers — *Shell Interface for Generative Intelligence
+Layers*. Links against the **system WebKitGTK** instead of bundling a browser engine, so the
+binary is a few hundred kilobytes and starting it is a process spawn rather than a container
+mount. Three providers out of the box.
+
+**[Hermes-Cpp](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
+A ground-up rewrite of NousResearch's Hermes Agent, which is Python. Deliberately not a fork:
+there is no shared history, and behaviour is ported by reading the original and reimplementing
+it — with parity tracked per subsystem against upstream release tags rather than left to
+memory. Early days.
+
 **[Kirei](https://github.com/Jeagermeister/Kirei)** · Lua
 An Aseprite extension that imports PNG/JPG/WebP images as clean, editable pixel sprites
 — edge hardening and palette quantization, so imported art behaves like art you drew.
