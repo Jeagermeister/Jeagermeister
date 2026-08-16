@@ -59,7 +59,7 @@ running on my own hardware. What you see here is the published result.
 That setup is its own small systems project: private networking, automated backups,
 self-hosted CI runners, and a documented recovery path.
 
-**On AI.** I use it, and I would rather say exactly how than leave it to be guessed at.
+**On AI.** I use it, and I would rather say exactly how than leave it up to assumption.
 
 The ideas, the design and the architecture are mine. I write the rough draft — including the
 wrong version I have to think my way out of first. AI comes in after that, for four things:
