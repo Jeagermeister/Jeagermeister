@@ -66,7 +66,7 @@ wrong version I have to think my way out of first. AI comes in after that, for f
 
 - **Review** — a second pass over code I have already written
 - **Revisions and touch-ups** — tightening what is there
-- **Documentation** — turning decisions I already made into prose
+- **Documentation** — describing the design, the code, and the individual components
 - **Unit tests** — help covering the cases
 
 Everything it produces, I read and understand before it lands. If I cannot explain a line, it
