@@ -1,4 +1,4 @@
-## Hi, I'm Brian 👋
+## Hi, I'm Brian 📊⚙️✌️
 
 I'm a **Data Engineer II**. I moved into software development from IT in 2022, and have
 spent the years since building data pipelines and the orchestration around them.
@@ -33,7 +33,7 @@ Layers*. Links against the **system WebKitGTK** instead of bundling a browser en
 binary is a few hundred kilobytes and starting it is a process spawn rather than a container
 mount. Three providers out of the box.
 
-**[Hermes-Cpp](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
+**[Hermit](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
 A supervisor for local models doing real filesystem work. Small models (9–12B through Ollama)
 can do the work but drift over a long session, so this keeps them on rails: every tool call
 confined to one sandbox root, every write read back and hashed, anything overwritten backed up
