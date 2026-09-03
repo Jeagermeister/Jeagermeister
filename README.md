@@ -7,7 +7,7 @@ Outside of that I build and maintain **Linux-native tooling**, mostly in the pla
 good software got abandoned or never existed. Recovering desktop Linux from years on
 Windows turned into a habit of fixing the gaps I hit along the way.
 
-Currently working in **C/C++**, **C#/.NET** and **Rust** — but also have experience in working with Python, SQL, & Javascript.
+Currently working in **C#**, **C++**, **Python** and **SQL** — but also have experience in working with Rust, C, & Javascript.
 
 <!-- Once the site is live, uncomment and fill in. This is the line that does the directing. -->
 <!-- ### 🌐 &nbsp;[brian.example](https://brian.example) — projects, documentation, and what I'm working toward -->
@@ -16,6 +16,21 @@ Currently working in **C/C++**, **C#/.NET** and **Rust** — but also have exper
 ---
 
 ### What I'm building
+
+**[Hermit](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
+A supervisor for local models doing real filesystem work. Small models (9–12B through Ollama)
+can do the work but drift over a long session, so this keeps them on rails: every tool call
+confined to one sandbox root, every write read back and hashed, anything overwritten backed up
+somewhere the model cannot reach — and completion decided by inspecting the filesystem rather
+than by the model saying it's done. Drives a model directly from the CLI, or runs as an MCP
+server so a larger assistant can call it for hands. Inspired by NousResearch's Hermes Agent,
+deliberately not a port.
+
+Every guardrail traces to a measured failure rather than a hunch. The 259 recorded runs the
+design is built on ship in the repo under [`bench/fsops/`](https://github.com/Jeagermeister/Hermes-Cpp/tree/main/bench/fsops)
+— including the runs where models reported success on an untouched tree, and the ones that
+overwrote real files with invented content. Sandbox, tools and verification are built and
+tested; the model loop is next.
 
 **[AEGIS](https://github.com/Jeagermeister/Aegis)** · C# / .NET 10
 A read-only control plane for the job schedulers a hybrid Windows / SQL Server / AWS shop
@@ -33,30 +48,15 @@ Linux as the primary target rather than an afterthought — Proton-aware game de
 native SMAPI support, and diagnostics for the engine limits that actually break modded
 games. Ships as an AppImage.
 
-**[Kirei](https://github.com/Jeagermeister/Kirei)** · Lua
-An Aseprite extension that imports PNG/JPG/WebP images as clean, editable pixel sprites
-— edge hardening and palette quantization, so imported art behaves like art you drew.
-
 **[SIGIL](https://github.com/Jeagermeister/sigil)** · C
 A minimal native client for AI chat providers — *Shell Interface for Generative Intelligence
 Layers*. Links against the **system WebKitGTK** instead of bundling a browser engine, so the
 binary is a few hundred kilobytes and starting it is a process spawn rather than a container
 mount. Three providers out of the box.
 
-**[Hermit](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
-A supervisor for local models doing real filesystem work. Small models (9–12B through Ollama)
-can do the work but drift over a long session, so this keeps them on rails: every tool call
-confined to one sandbox root, every write read back and hashed, anything overwritten backed up
-somewhere the model cannot reach — and completion decided by inspecting the filesystem rather
-than by the model saying it's done. Drives a model directly from the CLI, or runs as an MCP
-server so a larger assistant can call it for hands. Inspired by NousResearch's Hermes Agent,
-deliberately not a port.
-
-Every guardrail traces to a measured failure rather than a hunch. The 259 recorded runs the
-design is built on ship in the repo under [`bench/fsops/`](https://github.com/Jeagermeister/Hermes-Cpp/tree/main/bench/fsops)
-— including the runs where models reported success on an untouched tree, and the ones that
-overwrote real files with invented content. Sandbox, tools and verification are built and
-tested; the model loop is next.
+**[Kirei](https://github.com/Jeagermeister/Kirei)** · Lua
+An Aseprite extension that imports PNG/JPG/WebP images as clean, editable pixel sprites
+— edge hardening and palette quantization, so imported art behaves like art you drew.
 
 ---
 
