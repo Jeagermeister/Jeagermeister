@@ -17,6 +17,16 @@ Currently working in **C/C++**, **C#/.NET** and **Rust** — but also have exper
 
 ### What I'm building
 
+**[AEGIS](https://github.com/Jeagermeister/Aegis)** · C# / .NET 10
+A read-only control plane for the job schedulers a hybrid Windows / SQL Server / AWS shop
+actually runs — SQL Server Agent, Airflow (including MWAA), VisualCron — normalised into one
+inventory, one run history, and an ownership catalog harvested from the job descriptions
+teams already keep. The collectors watch for their own blind spots: purged `sysjobhistory`
+behind a watermark, a source that answers "healthy, 0 jobs". Failures are fingerprinted so
+one root cause is one alert, and a landing-zone validator checks vendor feeds against a
+versioned contract *before* any pipeline touches them. Metadata only, never row contents.
+Ships with a synthetic carrier-feed generator so the whole thing demos from `docker compose up`.
+
 **[Apocrypha](https://github.com/Jeagermeister/Apocrypha)** · C# / Avalonia
 A Linux-first continuation of the archived NexusMods.App. Mod management that treats
 Linux as the primary target rather than an afterthought — Proton-aware game detection,
