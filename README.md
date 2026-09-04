@@ -17,7 +17,7 @@ Currently working in **C#**, **C++**, **Python** and **SQL** — but also have e
 
 ### What I'm building
 
-**[Hermit](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
+**[Hermit](https://github.com/Jeagermeister/Hermit)** · C/C++
 A supervisor for local models doing real filesystem work. Small models (9–12B through Ollama)
 can do the work but drift over a long session, so this keeps them on rails: every tool call
 confined to one sandbox root, every write read back and hashed, anything overwritten backed up
@@ -27,7 +27,7 @@ server so a larger assistant can call it for hands. Inspired by NousResearch's H
 deliberately not a port.
 
 Every guardrail traces to a measured failure rather than a hunch. The 259 recorded runs the
-design is built on ship in the repo under [`bench/fsops/`](https://github.com/Jeagermeister/Hermes-Cpp/tree/main/bench/fsops)
+design is built on ship in the repo under [`bench/fsops/`](https://github.com/Jeagermeister/Hermit/tree/main/bench/fsops)
 — including the runs where models reported success on an untouched tree, and the ones that
 overwrote real files with invented content. Sandbox, tools and verification are built and
 tested; the model loop is next.
@@ -81,6 +81,19 @@ wrong version I have to think my way out of first. AI comes in after that, for f
 
 Everything it produces, I read and understand before it lands. If I cannot explain a line, it
 does not ship. I do not vibe-code.
+
+---
+
+### The hardware
+
+The benchmark numbers in my repos are tied to the machine that collected them, so here is
+what is behind the door.
+
+| | parts | role |
+|---|---|---|
+| **AI workstation** | Intel Core i7-14700K · 64 GB DDR5 · NVIDIA RTX PRO 5000 Blackwell, 72 GB GDDR7 · 3 × 2 TB Gen4 NVMe | Inference and benchmark collection for the larger model tier |
+| **General use** — Framework Desktop | AMD Ryzen AI Max+ 395 · 128 GB LPDDR5X unified · Radeon 8060S · 2 × 4 TB Gen4 NVMe | Daily driver, and the second benchmark collector |
+| **Laptop** — MSI Vector 16 HX AI | Intel Core Ultra 9 275HX · 64 GB DDR5 · RTX 5080 Laptop, 16 GB GDDR7 · 2 TB NVMe | Development, and the machine of record for Hermit's published sweeps |
 
 ---
 
