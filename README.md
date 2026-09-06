@@ -17,7 +17,7 @@ Currently working in **C#**, **C++**, **Python** and **SQL** — but also have e
 
 ### What I'm building
 
-**[Hermit](https://github.com/Jeagermeister/Hermes-Cpp)** · C/C++
+**[Hermit](https://github.com/Jeagermeister/Hermit)** · C/C++
 A supervisor for local models doing real filesystem work. Small models (9–12B through Ollama)
 can do the work but drift over a long session, so this keeps them on rails: every tool call
 confined to one sandbox root, every write read back and hashed, anything overwritten backed up
