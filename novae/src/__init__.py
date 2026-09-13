@@ -1,1 +1,0 @@
-"""NOVAE MVP source package."""
